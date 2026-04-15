@@ -1,0 +1,16 @@
+{
+  "name": "compare-q-learning-sarsa",
+  "version": "1.0.0",
+  "description": "Reinforcement Learning Homework 2: Q-Learning vs SARSA",
+  "main": "cliff_walking.py",
+  "engines": {
+    "openspec": "v1.1.1",
+    "antigravity": "v1.1.1"
+  },
+  "scripts": {
+    "dev:start": "bash startup.sh",
+    "dev:ending": "bash ending.sh"
+  },
+  "author": "PinHsien-Lee",
+  "license": "MIT"
+}

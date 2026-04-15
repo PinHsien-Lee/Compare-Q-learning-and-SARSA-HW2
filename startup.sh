@@ -1,31 +1,50 @@
 #!/bin/bash
 
-# startup.sh: Prepare development environment
+# startup.sh: Optimize dev startup for OpenSpec workflow
 
-echo "--- Startup Script ---"
+set -e # Exit on error
 
-# 1. Pull latest code from GitHub
-echo "Pulling latest code from GitHub..."
-git pull origin main
+echo "========================================"
+echo "      🚀 DEVELOPMENT STARTUP"
+echo "========================================"
 
-# 2. Read handover document if it exists
-HANDOVER_FILE="handover.md"
-if [ -f "$HANDOVER_FILE" ]; then
-    echo "Reading handover document..."
-    cat "$HANDOVER_FILE"
+# 1. Pull latest code
+echo "🔍 Checking for updates from GitHub..."
+if git pull origin main; then
+    echo "✅ Code is up to date."
 else
-    echo "No handover document found."
+    echo "⚠️ Git pull failed. Please check your connection or remote settings."
 fi
 
-# 3. Suggest next actions
+# 2. Read handover document
 echo ""
-echo "--- Next Actions ---"
-echo "Based on current status:"
-# Check openspec status if possible
-if command -v openspec &> /dev/null; then
-    openspec status
+echo "📝 CURRENT STATUS (00-handover.md):"
+echo "----------------------------------------"
+if [ -f "00-handover.md" ]; then
+    cat "00-handover.md"
 else
-    echo "Check tasks.md for pending work."
+    echo "Creating missing handover document..."
+    echo "# 00-Handover Document" > 00-handover.md
+    echo "Status: New start." >> 00-handover.md
+fi
+echo "----------------------------------------"
+
+# 3. Suggest next actions from tasks.md
+echo ""
+echo "💡 SUGGESTED NEXT ACTIONS:"
+TASKS_FILE="openspec/changes/compare-q-learning-sarsa/03-tasks.md"
+if [ -f "$TASKS_FILE" ]; then
+    echo "Checking $TASKS_FILE..."
+    # Find the first incomplete task
+    NEXT_TASK=$(grep "- \[ \]" "$TASKS_FILE" | head -n 1)
+    if [ -z "$NEXT_TASK" ]; then
+        echo "🎉 All tasks are complete! You can run 'npm run dev:ending' to wrap up."
+    else
+        echo "👉 Next pending task: $NEXT_TASK"
+    fi
+else
+    echo "⚠️ tasks.md not found at $TASKS_FILE"
 fi
 
-echo "Happy coding!"
+echo "========================================"
+echo "Ready for development. Good luck!"

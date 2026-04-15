@@ -17,7 +17,7 @@
 
 ### 累積獎勵曲線
 
-![Reward Curves](reward_curves.png)
+![Reward Curves](results/reward_curves.png)
 
 **關鍵觀察：**
 
@@ -43,14 +43,14 @@
 
 ### 學習到的策略
 
-![Policy Comparison](policy_comparison.png)
+![Policy Comparison](results/policy_comparison.png)
 
 ### 最優路徑對比
 
 ````carousel
-![Q-Learning 路徑：沿懸崖邊緣的最短路徑（14步）](q_learning_path.png)
+![Q-Learning 路徑：沿懸崖邊緣的最短路徑（14步）](results/q_learning_path.png)
 <!-- slide -->
-![SARSA 路徑：遠離懸崖的安全路徑（18步）](sarsa_path.png)
+![SARSA 路徑：遠離懸崖的安全路徑（18步）](results/sarsa_path.png)
 ````
 
 | 特性 | Q-Learning | SARSA |
@@ -69,7 +69,7 @@
 
 ## 四、穩定性分析
 
-![Stability Analysis](stability_analysis.png)
+![Stability Analysis](results/stability_analysis.png)
 
 **穩定性結論：**
 - **SARSA 明顯更穩定**：標準差收斂至極低值，學習過程波動小
@@ -79,9 +79,9 @@
 ### Q-Value 熱力圖
 
 ````carousel
-![Q-Learning Q值分布](q_learning_heatmap.png)
+![Q-Learning Q值分布](results/q_learning_heatmap.png)
 <!-- slide -->
-![SARSA Q值分布](sarsa_heatmap.png)
+![SARSA Q值分布](results/sarsa_heatmap.png)
 ````
 
 ---
