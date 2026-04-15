@@ -25,4 +25,4 @@
 
 - [x] 05-01 Create `startup.sh` for pulling code, reading handover, and suggesting actions.
 - [x] 05-02 Create `ending.sh` for updating tasks, archiving changes, writing handover, and pushing code.
-- [x] 05-03 Configure Git remote to `https://github.com/PinHsien-Lee/Compare-Q-learning-and-SARSA`.
+- [x] 05-03 Configure Git remote to `https://github.com/PinHsien-Lee/Compare-Q-learning-and-SARSA-HW2`.
