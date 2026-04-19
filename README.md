@@ -47,11 +47,9 @@
 
 ### 最優路徑對比
 
-````carousel
-![Q-Learning 路徑：沿懸崖邊緣的最短路徑（14步）](results/q_learning_path.png)
-<!-- slide -->
-![SARSA 路徑：遠離懸崖的安全路徑（18步）](results/sarsa_path.png)
-````
+| Q-Learning 路徑：沿懸崖邊緣 (14步) | SARSA 路徑：遠離懸崖的安全路徑 (18步) |
+|:---:|:---:|
+| ![Q-Learning Path](results/q_learning_path.png) | ![SARSA Path](results/sarsa_path.png) |
 
 | 特性 | Q-Learning | SARSA |
 |------|-----------|-------|
@@ -78,11 +76,9 @@
 
 ### Q-Value 熱力圖
 
-````carousel
-![Q-Learning Q值分布](results/q_learning_heatmap.png)
-<!-- slide -->
-![SARSA Q值分布](results/sarsa_heatmap.png)
-````
+| Q-Learning Q值分布 | SARSA Q值分布 |
+|:---:|:---:|
+| ![Q-Learning Heatmap](results/q_learning_heatmap.png) | ![SARSA Heatmap](results/sarsa_heatmap.png) |
 
 ---
 
