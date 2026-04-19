@@ -1,15 +1,19 @@
 # 00-Handover Document
+**Finalized Date:** 2026-04-19
 
-**Project:** DRL Homework 2 - Q-Learning vs SARSA
-**Current Date:** 2026-04-15
+## Final Status
+- All tasks in `openspec/changes/compare-q-learning-sarsa/03-tasks.md` completed.
+- Comparative analysis for Q-Learning and SARSA finalized.
+- Project archived in OpenSpec.
 
-## Current Status
-- Initial project structure created.
-- Reinforcement learning algorithms implemented in `cliff_walking.py`.
-- OpenSpec change `compare-q-learning-sarsa` initialized with proposal, design, and tasks.
-- Development automation scripts (`startup.sh`, `ending.sh`) implemented.
+## Results Summary
+### 學習表現分析 (前述成果)
+| 指標 | Q-Learning | SARSA |
+|------|-----------|-------|
+| 最終平均獎勵 (後50回合) | -49.95 ± 9.79 | **-22.13 ± 2.72** |
+| 最差單回合獎勵 | -456 | -179 |
+| 最佳單回合獎勵 | -13 | -15 |
+| 收斂回合 (avg > -50) | Episode 107 | **Episode 95** |
 
-## Next Actions
-- Verify the experimental results in `results/analysis_report.md`.
-- Ensure all tasks in `openspec/changes/compare-q-learning-sarsa/03-tasks.md` are marked as complete.
-- Finalize the handover for submission.
+## Next Development
+- Project ready for submission or next iteration.
